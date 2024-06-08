@@ -10,7 +10,7 @@ import java.io.Serializable;
 import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
-public class StandardCache<K, V extends Serializable> implements Cache<K, V>{
+public class StandardCache<K, V extends Serializable> implements Cache<K, V> {
 
     public static final String DEFAULT_CACHE_FOLDER = "cache";
     public static final int DEFAULT_MEMORY_CACHE_CAPACITY = 10_000;
@@ -112,6 +112,7 @@ public class StandardCache<K, V extends Serializable> implements Cache<K, V>{
 
     /**
      * This method will check only memory cache because disk cache stores data to disk and check is expensive operation
+     *
      * @param value value to check
      * @return contains or not
      */
